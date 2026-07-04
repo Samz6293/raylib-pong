@@ -1,0 +1,5 @@
+# Ignore the entire build directory and all compiled output
+build/
+
+# Ignore the language server cache completely
+.cache/
