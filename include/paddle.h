@@ -3,6 +3,7 @@
 
 class Paddle {
 private:
+
     // The paddle's internal state. Only the paddle can touch these.
     float x;
     float y;
@@ -12,6 +13,7 @@ private:
     Color color;
 
 public:
+
     // The Constructor: This runs exactly once when a paddle is created.
     // It demands starting values so it can assign them to the private variables above.
     Paddle(float startX, float startY, float startWidth, float startHeight, float startSpeed, Color startColor);

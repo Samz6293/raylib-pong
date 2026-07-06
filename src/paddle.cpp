@@ -9,3 +9,7 @@ Paddle::Paddle (float startX, float startY, float startWidth, float startHeight,
     speed = startSpeed;
     color = startColor;
 }
+
+void Paddle::Draw() {
+    DrawRectangle( (int) x, (int) y, (int) width, (int) height, color);
+}
