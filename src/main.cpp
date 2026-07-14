@@ -12,13 +12,22 @@ int main() {
     SetTargetFPS(60);
 
     // game objects
-    Paddle playerPaddle(10, (float) windowHeight/2 - 12, 15, 100, 40, YELLOW);
+    Paddle playerPaddle(10, (float) windowHeight/2 - 12, 15, 100, 20, YELLOW);
 
     while (!WindowShouldClose()) {
+
+        if (IsKeyDown(KEY_W)) {
+            playerPaddle.MoveUp();
+        }
+        if (IsKeyDown(KEY_S)) {
+            playerPaddle.MoveDown();
+        }
 
         BeginDrawing();
         ClearBackground(WHITE);
         playerPaddle.Draw();
+
+
         EndDrawing();
 
     }
