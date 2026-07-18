@@ -10,6 +10,7 @@ include_directories(include)
 add_executable(RaylibPong
     src/main.cpp
     src/paddle.cpp
+    src/ball.cpp
 )
 
 target_link_libraries(RaylibPong raylib)

@@ -1,7 +1,12 @@
 #include <raylib.h>
 #include "paddle.h"
+#include "ball.h"
 
 int main() {
+
+    /*
+    game load
+    */
 
     // game window
     const int windowWidth = 800;
@@ -13,8 +18,16 @@ int main() {
 
     // game objects
     Paddle playerPaddle(10, (float) windowHeight/2 - 12, 15, 100, 20, YELLOW);
+    Ball ball(GetScreenWidth() / 2.0, GetScreenHeight() / 2.0, 5, 5, 10, WHITE);
+
 
     while (!WindowShouldClose()) {
+
+        /*
+        game update
+        */
+
+        ball.Update();
 
         if (IsKeyDown(KEY_W)) {
             playerPaddle.MoveUp();
@@ -23,9 +36,13 @@ int main() {
             playerPaddle.MoveDown();
         }
 
+        /*
+        game draw
+        */
         BeginDrawing();
-        ClearBackground(WHITE);
+        ClearBackground(BLACK);
         playerPaddle.Draw();
+        ball.Draw();
 
 
         EndDrawing();
